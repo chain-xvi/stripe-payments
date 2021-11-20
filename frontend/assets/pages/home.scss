@@ -1,0 +1,116 @@
+.homePage{
+	max-width: 620px;
+	width: 100%;
+	margin: auto;
+
+	display: grid;
+	gap: 24px;
+
+	.pageContent{
+		display: grid;
+		gap: 24px;
+	}
+
+	.text{
+		font-size: 14px;
+		color: #596b90;
+		margin-bottom: 18px;
+	}
+
+
+	.infos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 18px;
+		.info {
+			text-align: center;
+			display: inline-block;
+			margin: auto;
+			.title {
+				font-weight: 500;
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			.title {
+				color: #191E24;
+			}
+			.subTitle, .status {
+				font-size: 14px;
+				line-height: 17px;
+				color: #647990;
+			}
+			.status {
+				text-transform: capitalize;
+				color: #4FBB87;
+			}
+		}
+	}
+
+	.plans{
+		display: grid;
+		gap: 14px;
+		.plan{
+			border: 1px solid #D3DAE4;
+			border-radius: 6px;
+			padding: 18px;
+			position: relative;
+			.planMetaContainer{
+				display: flex;
+			}
+			.planMeta{
+				flex-grow: 1;
+				.label{
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 18px;
+					color: #191E24;
+					margin-bottom: 10px;
+				}
+			}
+			.planFeatures{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 18px 30px;
+				margin-top: 30px;
+				.planFeat{
+					display: flex;
+					align-items: center;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 20px;
+					color: #191E24;
+					span {
+						margin-right: 10px;
+					}
+				}
+			}
+			&.active {
+				border: 2px solid #0075FF;
+				.check{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.price {
+	font-size: 34px;
+	line-height: 41px;
+	// letter-spacing: -0.05em;
+	color: #191E24;
+	margin-bottom: 0;
+	sup {
+		font-size: 20px;
+		line-height: 24px;
+		top: -14px;
+		margin-right: 6px;
+	}
+	span {
+		font-size: 14px;
+		line-height: 17px;
+		margin-left: 4px;
+		color: #647990;
+		bottom: 0;
+	}
+}
