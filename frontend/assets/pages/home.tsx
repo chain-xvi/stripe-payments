@@ -1,6 +1,7 @@
 import React, { Suspense, Fragment } from 'react';
 import toast from 'react-hot-toast';
 import './home.scss';
+import moment from 'moment';
 
 import {
 	Card,
@@ -86,7 +87,7 @@ function HomeContent() {
 						<div className="infos">
 							<div className="info">
 								<div className="title">Member since</div>
-								<div className="subTitle">3 months ago</div>
+								<div className="subTitle">{moment(user.created_at).fromNow()}</div>
 							</div>
 							<div className="info">
 								<div className="title">Active plan</div>
