@@ -17,7 +17,7 @@ export const createUser = {
 		const {name} = args;
 		const data = await knex('users').returning('id').insert({name});
 		return {
-			id: toGlobalId('User', data[0]),
+			id: data[0],
 			name,
 		}
 	}
@@ -52,7 +52,7 @@ export const updatePlan = {
     .returning(['id']);
 
     return {
-      id: toGlobalId('User', user.id),
+      id: user.id,
       active_plan,
       session_id: id,
     }
@@ -101,7 +101,7 @@ export const changePlan = {
     .returning(['id']);
 
     return {
-      id: toGlobalId('User', user.id),
+      id: user.id,
       active_plan,
     }
 	}
